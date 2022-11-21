@@ -1,109 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/open-props" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/open-props/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/open-props/buttons.min.css"
-    />
-    <title>Notion CMS</title>
-    <script type="module" src="/main.js" defer></script>
-    <style>
-      a{
-    text-decoration: none;
-  }
-body{
-  display: grid;
-  place-content: center;
-  background-image: var(--gradient-15);
-}
-.card-container{
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--size-fluid-4);
-  margin: var(--size-fluid-4);
-  max-width: 1200px;
-  margin-inline: auto;
-}
 
-.card{
-  flex:0 1 400px;
-  box-shadow: var(--shadow-5);
-  padding: var(--size-fluid-3);
-  border-radius: var(--radius-4);
-  background-color: var(--violet-0);
-  display: grid;
-  gap: var(--size-2);
-}
-.card__heading{
-  color: var(--pink-4)
-}
-.card__content{
-  display: grid;
-  gap: var(--size-2);
-}
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/open-props" />
+  <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
+  <title>Notion CMS</title>
+  <script type="module" src="/main.js" defer></script>
+  <style>
+    a {
+      text-decoration: none;
+    }
 
-.card__btn{
-  width: max-content;
-  background-color: var(--pink-4);
-  color: #fff;
-  padding: var(--size-2) var(--size-fluid-2);
-  border-radius: var(--radius-4);
-  margin-top: var(--size-fluid-1);
-  box-shadow: var(--shadow-4);
-  transition: all 250ms var(--ease-squish-3);
-}
+    body {
+      display: grid;
+      place-content: center;
+      background-image: var(--gradient-7);
+    }
 
-.card__btn:is(:hover, :focus){
-  text-decoration: none;
-  box-shadow: none;
-  transform: scale(0.9);
-}
-@media screen and (max-width: 410px) {
-  .card{
-    flex:0 1 320px;
-  }
-}
-@media screen and (max-width: 330px) {
-  .card{
-    flex:0 1 280px;
-  }
-}
-@media (prefers-color-scheme: dark){
-  html{
-    --shadow-strength: 3%;
-  }
-  body{
-    background-image: var(--gradient-23);
-  }
-  .card{
-    background-color: var(--gray-8);
-  }
-  .card__heading{
-  color: var(--pink-5)
-  }
-  .card__btn{
-  background-color: var(--pink-5);
-  }
-}
-    </style>
-  </head>
-  <body>
-    <main class="card-container">
-    </main>
-    <script>
-      (function loadSkeletonData() {
-        const skeleton = {
-          html: `
+    header {
+      text-align: center;
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--sand-0);
+    }
+
+    .card-container {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--size-fluid-4);
+      margin: var(--size-fluid-4);
+      max-width: 1200px;
+      margin-inline: auto;
+    }
+
+    .card {
+      flex: 0 1 400px;
+      box-shadow: var(--shadow-5);
+      padding: var(--size-fluid-3);
+      border-radius: var(--radius-4);
+      background-color: var(--blue-0);
+      display: grid;
+      gap: var(--size-2);
+    }
+
+    .card__heading {
+      color: var(--blue-6);
+      font-size: 2rem;
+    }
+
+    .card__content {
+      display: grid;
+      gap: var(--size-2);
+    }
+
+    .card__btn {
+      width: max-content;
+      background-color: var(--blue-4);
+      color: #fff;
+      padding: var(--size-2) var(--size-fluid-2);
+      border-radius: var(--radius-4);
+      margin-top: var(--size-fluid-1);
+      box-shadow: var(--shadow-4);
+      transition: all 250ms var(--ease-squish-3);
+    }
+
+    .card__btn:is(:hover, :focus) {
+      text-decoration: none;
+      box-shadow: none;
+      transform: scale(0.9);
+    }
+
+    @media screen and (max-width: 410px) {
+      .card {
+        flex: 0 1 320px;
+      }
+    }
+
+    @media screen and (max-width: 330px) {
+      .card {
+        flex: 0 1 280px;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        --shadow-strength: 3%;
+      }
+
+      body {
+        background-image: var(--gradient-23);
+      }
+
+      .card {
+        background-color: var(--gray-8);
+      }
+
+      .card__heading {
+        color: var(--blue-5)
+      }
+
+      .card__btn {
+        background-color: var(--blue-5);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Interesting Blog About React</h1>
+  </header>
+  <main class="card-container">
+  </main>
+  <script>
+    (function loadSkeletonData() {
+      const skeleton = {
+        html: `
           <article class="card">
         <div class="card__img"></div>
         <h2 class="card__heading"></h2>
@@ -115,24 +139,24 @@ body{
         </div>
         <a class="card__btn"></a>
       </article>`,
-          css: `<style>
+        css: `<style>
             .card__img {
               width: 100%;
               height: 140px;
-              background-color: var(--pink-2);
+              background-color: var(--blue-2);
               border-radius: var(--radius-3);
             }
             .card__heading {
               width: 80%;
               height: 3rem;
-              background-color: var(--pink-4);
+              background-color: var(--blue-4);
               border-radius: var(--radius-3);
               margin: 1rem 0 0.6rem
             }
             .card__content > p {
               width: 100%;
               height: 1.5rem;
-              background-color: var(--pink-2);
+              background-color: var(--blue-2);
               border-radius: var(--radius-3);
             }
             .card__content > p:last-child {
@@ -143,10 +167,11 @@ body{
               height: 2.8rem;
             }
             </style>`,
-        };
-        document.querySelector(".card-container").innerHTML =
-          skeleton.html.repeat(6) + skeleton.css;
-      })();
-    </script>
-  </body>
+      };
+      document.querySelector(".card-container").innerHTML =
+        skeleton.html.repeat(6) + skeleton.css;
+    })();
+  </script>
+</body>
+
 </html>
